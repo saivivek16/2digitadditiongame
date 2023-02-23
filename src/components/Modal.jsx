@@ -5,7 +5,6 @@ import Modal from '@mui/material/Modal';
 import Fade from '@mui/material/Fade';
 import Typography from '@mui/material/Typography';
 import { Divider } from '@mui/material';
-
 import './styles.css'
 import useTimer from '../hooks/useTimer';
 import { useNavigate } from 'react-router-dom';
@@ -22,9 +21,10 @@ const style = {
   textAlign:"center"
 };
 
-export default function TransitionsModal({open,handleCloseModal,score,liveCount}) {
+export default function TransitionsModal({open,score,liveCount,index}) {
+  let  count;
   const navigate = useNavigate();
-  const {minutes,seconds} = useTimer(liveCount);
+  const {minutes,seconds} = useTimer(liveCount,index);
   return (
     <div>
       <Modal

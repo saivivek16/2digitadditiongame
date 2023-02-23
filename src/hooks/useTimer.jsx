@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react";
 
-function  useTimer(stopCounter) {
+function  useTimer(stopCounter,index) {
   const [seconds, setSeconds] = useState(0);
   const [minutes, setMinutes] = useState(0);
 
   useEffect(() => {
-     if(stopCounter!==0){
+     if(stopCounter!==0&&index!==9){
     const interval = setInterval(() => {
       if (seconds === 59) {
         setSeconds(0);

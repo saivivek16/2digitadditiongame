@@ -22,7 +22,7 @@ const Quiz = () => {
     if (liveCount === 0) setOpenModal(true);
   }, [liveCount]);
 
-  const handleCloseModal = () => setOpenModal(false);
+
   const handleClose = (event, reason) => {
     if (reason === "clickaway") {
       return;
@@ -52,8 +52,8 @@ const Quiz = () => {
       <TransitionsModal
         score={score}
         open={openModal}
-        handleCloseModal={handleCloseModal}
         liveCount={liveCount}
+        index={index}
       />
     </>
   );
