@@ -10,7 +10,7 @@ export default function SimpleSnackbar({open,handleClose}) {
   return (
     <div>
       <Snackbar open={open.open} autoHideDuration={400} onClose={handleClose} anchorOrigin={{ vertical:"top", horizontal:"center" }}>
-        <Alert onClose={handleClose} severity={open.severity} sx={{ width: '100%' }}>
+        <Alert onClose={handleClose} severity={open.severity} >
           {open.severity==="success"?"Correct!":"Wrong!"}
         </Alert>
       </Snackbar>
